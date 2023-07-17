@@ -1,0 +1,124 @@
+= Hello Asciidoctor Converter
+Steve D Roach
+:email: sroachst@gmail.com
+:stylesdir: ../styles
+:stylesheet: foundation.css
+:toc: left
+:sectnums:
+:title-page:
+:source-highlighter: rouge
+:rouge-css: style
+:nofooter:
+:imagesdir: images
+:google: This Is Another Google
+:title-page-background-image: coverpage.svg
+:data-uri:
+
+== Roadmap
+
+
+[roadmap,scale="1.5", role="left"]
+----
+- now
+Architect the application security model [[https://medium.com/bytebytego-system-design-alliance/top-10-architecture-characteristics-non-functional-requirements-with-cheatsheat-7ad14bbb0a9b NFR]] using OAuth2
+- now
+Solution application migration from legacy platform
+- now
+Migrate application workloads to public cloud
+- now
+Strategic Initiative for API
+- now
+API Versioning and Release Strategy
+- later
+Event Driven Architecture
+- next
+Domain Events
+----
+
+
+== Timeline View
+
+Time to create a timeline view
+
+[timeline,title="Demo timeline Builder by docops.io",scale="1.5"]
+----
+-
+date: July 23rd, 2023
+text: DocOps extension Server releases a new feature, Timeline Maker
+for asciidoctorj. With a simple text markup block you can
+create very powerful timeline images. Enjoy!
+-
+date: August 15th, 2023
+text: [[https://DocOps.io docops.io]] revamping website with updated documentation. All
+our work will be updated with latest documentation for Panels,
+for extension server are the various plug-ing for asciidoctorj.
+-
+date: September 1st, 2023
+text: DocOps.io will begin work on revamping the asciidoctorj converter.
+with the asciidoctorj 3.0.0 release coming we will need to migrate
+custom plug-ins to the new version of the extensions as they will bring braking changes.
+-
+date: October 18th, 2023
+text: Time to reimagine the future. Is it possible
+to write a lexer parser for custom language?
+-
+date: November 16th, 2023
+text: Another year been on this earth.
+Time to celebrate. Good times.
+-
+date: December 11th, 2023
+text: Annual start of vacation, time to relax
+and plugin the controller.
+----
+
+
+[panels,"buttons"]
+----
+panels {
+    theme {
+        scale=0.7f
+        colorMap {
+				color("#a1f196")
+                color("#165578")
+                color("#7d746c")
+                color("#2442d1")
+                color("#c0adef")
+                color("#4d2666")
+                color("#fbb103")
+                color("#1eb3f1")
+                color("#4f49eb")
+                color("#f3b304")
+                color("#e693ce")
+                color("#a6b23b")
+                color("#ad217f")
+                color("#2fb6ee")
+                color("#81392e")
+                color("#071e9b")
+                color("#675b01")
+                color("#ed6b19")
+                color("#a02cae")
+                color("#88683f")
+			}
+    }
+    panel {
+        link = "https://www.google.com"
+        label = "#[Google]"
+    }
+    panel {
+        link = "https://www.apple.com"
+        label = "Apple"
+    }
+    panel {
+        link = "https://www.microsoft.com"
+        label = "Microsoft"
+    }
+    panel {
+        link = "https://www.amazon.com"
+        label = "Amazon"
+    }
+    panel {
+        link = "https://www.netflix.com"
+        label = "Netflix"
+    }
+}
+----

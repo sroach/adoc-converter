@@ -1,0 +1,7 @@
+server:
+  port: 7001
+  servlet:
+    context-path: /converter
+
+webroot:
+  dir: /Users/steveroach/IdeaProjects/adoc-converter/src/asciidoc

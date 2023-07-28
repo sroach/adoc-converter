@@ -1,0 +1,27 @@
+extends: default
+page:
+  margin: [0.5in, 0.67in, 0.67in, 0.67in]
+  margin-inner: 0.75in
+  margin-outer: 0.59in
+
+title-page:
+  text-align: right
+  font-size: 24
+  background-image: images/coverpage.svg
+  title:
+    font_size: $heading_h1_font_size
+    font_color: #aaaaaa
+    font_style: bold
+    line_height: 1.2
+    top: 65%
+
+footer:
+  border-color: #DDDDDD
+  border-style: solid
+  height: 0.75in
+  recto:
+    right:
+      content: '{section-or-chapter-title} | *{page-number} of {page-count}*'
+  verso:
+    left:
+      content: '*{page-number} of {page-count}* | {section-or-chapter-title}'

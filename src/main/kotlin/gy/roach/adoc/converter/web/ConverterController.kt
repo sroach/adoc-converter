@@ -3,6 +3,7 @@ package gy.roach.adoc.converter.web
 import gy.roach.adoc.converter.adoc.Converter
 import jakarta.servlet.http.HttpServletRequest
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -25,5 +26,17 @@ class ConverterController {
         converter.makeHtml(f)
         val fname = File(dir, path.replace(".adoc", ".html"))
         return ResponseEntity.ok(fname.readText())
+    }
+
+    @GetMapping("/doc/*/*.pdf", produces = [MediaType.APPLICATION_PDF_VALUE])
+    fun getDocumentPdf(httpServletRequest: HttpServletRequest): ResponseEntity<ByteArray> {
+        val path = httpServletRequest.requestURI.replace("/converter/doc/", "")
+        println(path)
+        val f = File(dir, path.replace(".pdf", ".adoc"))
+
+        val converter = Converter()
+        converter.makePdf(f)
+        val fname = File(dir, path.replace(".adoc", ".html"))
+        return ResponseEntity.ok(fname.readBytes())
     }
 }

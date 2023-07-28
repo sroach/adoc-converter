@@ -51,12 +51,7 @@
         <dependency>
             <groupId>org.asciidoctor</groupId>
             <artifactId>asciidoctorj-diagram</artifactId>
-            <version>2.2.4</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sourceforge.plantuml</groupId>
-            <artifactId>plantuml</artifactId>
-            <version>1.2023.4</version>
+            <version>2.2.9</version>
         </dependency>
         <dependency>
             <groupId>org.asciidoctor</groupId>
@@ -79,6 +74,38 @@
             <groupId>io.docops</groupId>
             <version>${docops-button-render.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.elk/org.eclipse.elk.core -->
+        <dependency>
+            <groupId>org.eclipse.elk</groupId>
+            <artifactId>org.eclipse.elk.core</artifactId>
+            <version>0.8.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.elk/org.eclipse.elk.alg.layered -->
+        <dependency>
+            <groupId>org.eclipse.elk</groupId>
+            <artifactId>org.eclipse.elk.alg.layered</artifactId>
+            <version>0.8.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.eclipse.elk/org.eclipse.elk.graph -->
+        <dependency>
+            <groupId>org.eclipse.elk</groupId>
+            <artifactId>org.eclipse.elk.graph</artifactId>
+            <version>0.8.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.elk/org.eclipse.elk.alg.common -->
+        <dependency>
+            <groupId>org.eclipse.elk</groupId>
+            <artifactId>org.eclipse.elk.alg.common</artifactId>
+            <version>0.8.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.plantuml</groupId>
+            <artifactId>plantuml</artifactId>
+            <version>1.2023.10</version>
+        </dependency>
+
     </dependencies>
     <build>
         <sourceDirectory>src/main/kotlin</sourceDirectory>

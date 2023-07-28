@@ -2,7 +2,7 @@
 Steve D Roach
 :email: sroachst@gmail.com
 :stylesdir: ../styles
-:stylesheet: foundation.css
+:stylesheet: lumen.css
 :toc: left
 :sectnums:
 :title-page:
@@ -11,13 +11,12 @@ Steve D Roach
 :nofooter:
 :imagesdir: images
 :google: This Is Another Google
-:title-page-background-image: coverpage.svg
 :data-uri:
 
 == Roadmap
 
 
-[roadmap,scale="1.5", role="left"]
+[roadmap,scale="1.5", role="center"]
 ----
 - now
 Architect the application security model [[https://medium.com/bytebytego-system-design-alliance/top-10-architecture-characteristics-non-functional-requirements-with-cheatsheat-7ad14bbb0a9b NFR]] using OAuth2
@@ -71,34 +70,28 @@ text: Annual start of vacation, time to relax
 and plugin the controller.
 ----
 
+== Panel Buttons
 
-[panels,"buttons"]
+[panels,"buttons",role="center"]
 ----
 panels {
     theme {
-        scale=0.7f
+        scale=1.4f
         colorMap {
-				color("#a1f196")
-                color("#165578")
-                color("#7d746c")
-                color("#2442d1")
-                color("#c0adef")
-                color("#4d2666")
-                color("#fbb103")
-                color("#1eb3f1")
-                color("#4f49eb")
-                color("#f3b304")
-                color("#e693ce")
-                color("#a6b23b")
-                color("#ad217f")
-                color("#2fb6ee")
-                color("#81392e")
-                color("#071e9b")
-                color("#675b01")
-                color("#ed6b19")
-                color("#a02cae")
-                color("#88683f")
+        color("#A43B3B")
+            color("#01FF90")
+            color("#FF6F36")
+            color("#EAA213")
+            color("#F7E67A")
+            color("#45618E")
+            color("#FFD373")
+            color("#FFAF10")
+            color("#FF7F00")
+            color("#6D4F98")
 			}
+        font = font{
+            size="18px"
+        }
     }
     panel {
         link = "https://www.google.com"
@@ -120,5 +113,466 @@ panels {
         link = "https://www.netflix.com"
         label = "Netflix"
     }
+}
+----
+== Pill Buttones
+[panels,"buttons",role="center"]
+----
+panels {
+    theme {
+        scale=0.6f
+        colorMap {
+            color("#A43B3B")
+            color("#01FF90")
+            color("#FF6F36")
+            color("#EAA213")
+            color("#F7E67A")
+            color("#45618E")
+            color("#FFD373")
+            color("#FFAF10")
+            color("#FF7F00")
+            color("#6D4F98")
+			}
+        font = font{
+            size="24px"
+        }
+    }
+    pill {
+        link = "https://www.google.com"
+        label = "#[Google]"
+    }
+    pill {
+        link = "https://www.apple.com"
+        label = "Apple"
+    }
+    pill {
+        link = "https://www.microsoft.com"
+        label = "Microsoft"
+    }
+    pill {
+        link = "https://www.amazon.com"
+        label = "Amazon"
+    }
+    pill {
+        link = "https://www.netflix.com"
+        label = "Netflix"
+    }
+}
+----
+
+== Slim Panels
+
+[panels,role="center"]
+----
+panels {
+    theme {
+        scale=1.2f
+        layout {
+            columns=4
+            groupOrder = GroupingOrder.ASCENDING
+        }
+        font = font {
+            color = "#000000"
+            size="10px"
+        }
+        colorMap{
+            color("#A43B3B")
+            color("#01FF90")
+            color("#FF6F36")
+            color("#EAA213")
+            color("#F7E67A")
+            color("#45618E")
+            color("#FFD373")
+            color("#FFAF10")
+            color("#FF7F00")
+            color("#6D4F98")
+        }
+        legendOn = false
+        gradientStyle = DarkTheme
+    }
+    slim {
+        link = "https://www.google.com"
+        label = "Google"
+        type = "Advertising"
+        description = "Google is is an American multinational technology company that specializes in Internet-related services and products "
+        author("Sergey Brin")
+        author("Larry Page")
+        date ="07/30/1998"
+    }
+    slim {
+        link = "https://www.apple.com"
+        label = "Apple"
+        type = "Personal Devices"
+        description = "Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. "
+        author("Steve Jobs")
+        author("Steve Wozniak")
+        date ="01/30/1977"
+    }
+    slim {
+        link = "https://www.microsoft.com"
+        label = "Microsoft"
+        type = "Software"
+        description = "Microsoft Corporation is an American multinational technology corporation which produces computer software, consumer electronics, personal computers, and related services."
+        author("Bill Gates")
+    }
+    slim {
+        link = "https://www.amazon.com"
+        label = "Amazon"
+        type = "Super Store"
+        description = "Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence"
+        author("Jeff Bezos")
+    }
+    slim {
+        link = "https://www.netflix.com"
+        label = "Netflix"
+        type = "Movie Theater"
+        description = "Netflix, Inc. is an American subscription streaming service and production company."
+        author("Reed")
+        author("Marc")
+    }
+    slim {
+        link = "https://www.facebook.com"
+        label = "Facebook"
+        type = "Social Butterfly"
+        description = "Facebook is an American online social media and social networking service owned by Meta Platforms."
+        author("Mark Zukerberg")
+    }
+    slim {
+        link = "https://www.instagram.com"
+        label = "Instagram"
+        type = "Beach"
+        description = "Instagram is an American photo and video sharing social networking service. "
+        author("Kevin")
+        author("Mike")
+    }
+    slim {
+        link = "#[link-server]#[app]"
+        label = "DocOps.io"
+        type = "Documentation"
+        description = "Sharing documentation experience for developers to extend with AsciiDoctor"
+        author("Steve Roach")
+        author("Ian Rose")
+    }
+}
+----
+== Dark Theme
+
+[panels,role="center"]
+----
+panels {
+    theme {
+        scale=1.2f
+        layout {
+            columns=4
+            groupOrder = GroupingOrder.ASCENDING
+        }
+        font = font {
+            color = "#000000"
+            size="10px"
+        }
+        colorMap{
+            color("#242526")
+            color("#18191A")
+            color("#181818")
+            color("#404040")
+            color("#282828")
+            color("#8899AC")
+            color("#15202B")
+            color("#192734")
+            color("#22303C")
+
+        }
+        legendOn = false
+        gradientStyle = DarkTheme
+    }
+    slim {
+        link = "https://www.google.com"
+        label = "Google"
+        type = "Advertising"
+        description = "Google is is an American multinational technology company that specializes in Internet-related services and products "
+        author("Sergey Brin")
+        author("Larry Page")
+        date ="07/30/1998"
+    }
+    slim {
+        link = "https://www.apple.com"
+        label = "Apple"
+        type = "Personal Devices"
+        description = "Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. "
+        author("Steve Jobs")
+        author("Steve Wozniak")
+        date ="01/30/1977"
+    }
+    slim {
+        link = "https://www.microsoft.com"
+        label = "Microsoft"
+        type = "Software"
+        description = "Microsoft Corporation is an American multinational technology corporation which produces computer software, consumer electronics, personal computers, and related services."
+        author("Bill Gates")
+    }
+    slim {
+        link = "https://www.amazon.com"
+        label = "Amazon"
+        type = "Super Store"
+        description = "Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence"
+        author("Jeff Bezos")
+    }
+    slim {
+        link = "https://www.netflix.com"
+        label = "Netflix"
+        type = "Movie Theater"
+        description = "Netflix, Inc. is an American subscription streaming service and production company."
+        author("Reed")
+        author("Marc")
+    }
+    slim {
+        link = "https://www.facebook.com"
+        label = "Facebook"
+        type = "Social Butterfly"
+        description = "Facebook is an American online social media and social networking service owned by Meta Platforms."
+        author("Mark Zukerberg")
+    }
+    slim {
+        link = "https://www.instagram.com"
+        label = "Instagram"
+        type = "Beach"
+        description = "Instagram is an American photo and video sharing social networking service. "
+        author("Kevin")
+        author("Mike")
+    }
+    slim {
+        link = "#[link-server]#[app]"
+        label = "DocOps.io"
+        type = "Documentation"
+        description = "Sharing documentation experience for developers to extend with AsciiDoctor"
+        author("Steve Roach")
+        author("Ian Rose")
+    }
+}
+----
+== Round Buttons
+
+[panels,"round",role="center"]
+----
+panels {
+    theme {
+        scale=0.6f
+        	colorMap {
+				color("#A43B3B")
+            color("#01FF90")
+            color("#FF6F36")
+            color("#EAA213")
+            color("#F7E67A")
+            color("#45618E")
+            color("#FFD373")
+            color("#FFAF10")
+            color("#FF7F00")
+            color("#6D4F98")
+			}
+            font = font {
+                color = "#fcfcfc"
+                size = "24px"
+            }
+        dropShadow = 5
+    }
+    round {
+        link = "https://www.google.com"
+        label = "Google"
+    }
+    round {
+        link = "https://www.apple.com"
+        label = "Apple"
+    }
+    round {
+        link = "https://www.microsoft.com"
+        label = "Microsoft"
+    }
+    round {
+        link = "https://www.amazon.com"
+        label = "Amazon"
+    }
+    round {
+        link = "https://www.netflix.com"
+        label = "Netflix"
+    }
+}
+----
+
+[plantuml,hello,svg]
+----
+@startuml
+!pragma layout smetana
+!include <logos/nginx.puml>
+!include <elastic/elasticsearch/elasticsearch.puml>
+rectangle "Travelers"  as t #edc9fa-dc93f6 {
+    rectangle "TMS" as tms
+    rectangle "MDM" as mdm
+    rectangle "GPREF" as gpref
+}
+rectangle "AWS EKS" as eks #fdc2de-fc86be {
+    rectangle "NGINX API Gateway \n<$nginx>" as nginx #80ffc7-01FF90
+    rectangle "Digital Policy Service" as dps #80ffc7-01FF90
+    rectangle "Zipkin" as zipkin #80ffc7-01FF90
+    database "Open Search \n <$elasticsearch>" as os #d6d8f6-aeb1ed
+    database "Persistent Volume Claim" as pvs #d6d8f6-aeb1ed
+}
+
+tms -d-> nginx : 1. makes request
+nginx -d-> dps : 2. api gateway content \n negotiates version
+dps -u-> mdm : 3. calls mdm
+dps -u-> gpref: 4. call gpref
+dps -d-> zipkin: 5. send trace information \n to zipkin
+dps -d-> pvs : for storing circuit breaker stats
+zipkin -d-> os : 6. store traces for \n retrieving and viewing later
+@enduml
+----
+
+[release,scale=0.7,role="left", animate="ON"]
+----
+{
+  "title": "Release Strategy Builder",
+  "scale": 0.6,
+  "releases": [
+    {
+      "type": "M1",
+      "lines": [
+        "Team will deploy to application server current production code",
+        "Setup IHS proxy",
+        "Team will Mark out websphere servers and mark in liberty servers",
+        "Team will validate Okta changes on Liberty",
+        "Once validated team will mark out liberty servers and mark in websphere servers",
+        "QA will validate Production is still working",
+        "Team will record all observations",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well"
+      ],
+      "date": "July 30th, 2023",
+      "selected": true,
+      "goal": "Our goal is to Establish the Liberty infrastructure with Okta enabled"
+    },
+    {
+      "type": "RC1",
+      "lines": [
+        "Team will deploy to application server current production code",
+        "Setup IHS proxy",
+        "Team will Mark out websphere servers and mark in liberty servers",
+        "Team will validate Okta changes on Liberty",
+        "Once validated team will mark out liberty servers and mark in websphere servers",
+        "QA will validate Production is still working",
+        "Team will record all observations",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well"
+      ],
+      "date": "TBD",
+      "selected": true,
+      "goal": "Our goal is ..."
+    },
+    {
+      "type": "GA",
+      "lines": [
+        "Team will deploy to application server current production code",
+        "Setup IHS proxy",
+        "Team will Mark out websphere servers and mark in liberty servers",
+        "Team will validate Okta changes on Liberty",
+        "Once validated team will mark out liberty servers and mark in websphere servers",
+        "QA will validate Production is still working",
+        "Team will record all observations",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well"
+      ],
+      "date": "TBD",
+      "selected": true,
+      "goal": "Our goal is ..."
+    }
+  ],
+  "style": "TLS",
+  "displayConfig": {
+    "colors": ["#fc86be",
+    "#dc93f6",
+    "#aeb1ed"],
+    "fontColor": "#000000"
+    }
+}
+----
+
+[release,scale=0.7,role="left", animate="ON"]
+----
+{
+  "title": "Release Strategy Builder",
+  "scale": 0.9,
+  "releases": [
+    {
+      "type": "M1",
+      "lines": [
+        "Team will deploy to application server current production code",
+        "Setup IHS proxy",
+        "Team will Mark out websphere servers and mark in liberty servers",
+        "Team will validate Okta changes on Liberty",
+        "Once validated team will mark out liberty servers and mark in websphere servers",
+        "QA will validate Production is still working",
+        "Team will record all observations",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well"
+      ],
+      "date": "July 30th, 2023",
+      "selected": true,
+      "goal": "Our goal is to Establish the Liberty infrastructure with Okta enabled",
+        "completed": true
+    },
+    {
+      "type": "RC1",
+      "lines": [
+        "Team will deploy to application server current production code",
+        "Setup IHS proxy",
+        "Team will Mark out websphere servers and mark in liberty servers",
+        "Team will validate Okta changes on Liberty",
+        "Once validated team will mark out liberty servers and mark in websphere servers",
+        "QA will validate Production is still working",
+        "Team will record all observations",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well"
+      ],
+      "date": "TBD",
+      "selected": true,
+      "goal": "Our goal is ..."
+    },
+    {
+      "type": "GA",
+      "lines": [
+        "Team will deploy to application server current production code",
+        "Setup IHS proxy",
+        "Team will Mark out websphere servers and mark in liberty servers",
+        "Team will validate Okta changes on Liberty",
+        "Once validated team will mark out liberty servers and mark in websphere servers",
+        "QA will validate Production is still working",
+        "Team will record all observations",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well",
+        "Team will validate logs and record observations as well"
+      ],
+      "date": "September 20th",
+      "selected": true,
+      "goal": "Our goal is ..."
+    }
+  ],
+  "style": "R",
+  "displayConfig": {
+    "colors": [ "#FF6F36", "#EAA213", "#01FF90"],
+    "fontColor": "#000000",
+    "circleColors": [
+        "#FFAF10", "#FFD373", "#45618E"
+    ]
+  }
 }
 ----

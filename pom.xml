@@ -22,7 +22,7 @@
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
         <kotlin.version>1.9.0</kotlin.version>
         <docops-button-render.version>2023.18</docops-button-render.version>
-        <asciidoctorj-docops-panel.version>2023.26</asciidoctorj-docops-panel.version>
+        <asciidoctorj-docops-panel.version>2023.28</asciidoctorj-docops-panel.version>
     </properties>
 
     <dependencies>

@@ -16,22 +16,22 @@ Steve D Roach
 == Roadmap
 
 
-[roadmap,scale="1.5", role="center"]
+[roadmap,scale="1.5", role="center",title="Roadmap"]
 ----
 - now
-Architect the application security model [[https://medium.com/bytebytego-system-design-alliance/top-10-architecture-characteristics-non-functional-requirements-with-cheatsheat-7ad14bbb0a9b NFR]] using OAuth2
-- now
-Solution application migration from legacy platform
-- now
-Migrate application workloads to public cloud
-- now
-Strategic Initiative for API
-- now
-API Versioning and Release Strategy
+Determine consuming applications for Form Property Service & Customer inquiry Service
 - later
-Event Driven Architecture
+Use common docker image to streamline the process.
+- now
+analyze Form Property Service for their dependencies - Patrick analyze cusomter inquiry search for cloud dependencies.
 - next
-Domain Events
+take these Form Property Service feature and customer inquiry service to governance
+- next
+start iBob process, Surekha for both application
+- next
+dockerize Form property service
+ build spring boot 3 version of application
+ analyze black duck results
 ----
 
 
@@ -39,7 +39,7 @@ Domain Events
 
 Time to create a timeline view
 
-[timeline,title="Demo timeline Builder by docops.io",scale="1.5"]
+[timeline,title="DemotimelineBuilderbydocops.io",scale="1.5"]
 ----
 -
 date: July 23rd, 2023
@@ -267,7 +267,7 @@ panels {
             groupOrder = GroupingOrder.ASCENDING
         }
         font = font {
-            color = "#000000"
+            color = "#f3f3f3"
             size="10px"
         }
         colorMap{
@@ -501,11 +501,12 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
 }
 ----
 
-[release,scale=0.7,role="left", animate="ON"]
+
+[release,scale=0.7,role="left", animate="OFF"]
 ----
 {
   "title": "Release Strategy Builder",
-  "scale": 0.9,
+  "scale": 0.7,
   "releases": [
     {
       "type": "M1",
@@ -543,7 +544,7 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
         "Team will validate logs and record observations as well"
       ],
       "date": "TBD",
-      "selected": true,
+       "completed": true
       "goal": "Our goal is ..."
     },
     {
@@ -566,12 +567,15 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
       "goal": "Our goal is ..."
     }
   ],
-  "style": "R",
+  "style": "TLS",
   "displayConfig": {
     "colors": [ "#FF6F36", "#EAA213", "#01FF90"],
     "fontColor": "#000000",
     "circleColors": [
         "#FFAF10", "#FFD373", "#45618E"
+    ],
+    "carColors": [
+        "#000000", "#000000", "#000000"
     ]
   }
 }

@@ -2,7 +2,7 @@
 Steve D Roach
 :email: sroachst@gmail.com
 :stylesdir: ../styles
-:stylesheet: lumen.css
+:stylesheet: slate.css
 :toc: left
 :sectnums:
 :title-page:
@@ -12,11 +12,11 @@ Steve D Roach
 :imagesdir: images
 :google: This Is Another Google
 :data-uri:
+:experimental:
 
 == Roadmap
 
-
-[roadmap,scale="1.5", role="center",title="Roadmap"]
+[roadmap,scale="1.5", role="center",title="Roadmap", numChars="30"]
 ----
 - now
 Determine consuming applications for Form Property Service & Customer inquiry Service
@@ -39,7 +39,7 @@ dockerize Form property service
 
 Time to create a timeline view
 
-[timeline,title="DemotimelineBuilderbydocops.io",scale="1.5"]
+[timeline,title="DemotimelineBuilderbydocops.io",scale="1.0", numChars="24"]
 ----
 -
 date: July 23rd, 2023
@@ -55,7 +55,7 @@ for extension server are the various plug-ing for asciidoctorj.
 date: September 1st, 2023
 text: DocOps.io will begin work on revamping the asciidoctorj converter.
 with the asciidoctorj 3.0.0 release coming we will need to migrate
-custom plug-ins to the new version of the extensions as they will bring braking changes.
+custom plug-ins.
 -
 date: October 18th, 2023
 text: Time to reimagine the future. Is it possible
@@ -115,7 +115,8 @@ panels {
     }
 }
 ----
-== Pill Buttones
+
+== Pill Buttons
 [panels,"buttons",role="center"]
 ----
 panels {
@@ -255,101 +256,7 @@ panels {
     }
 }
 ----
-== Dark Theme
 
-[panels,role="center"]
-----
-panels {
-    theme {
-        scale=1.2f
-        layout {
-            columns=4
-            groupOrder = GroupingOrder.ASCENDING
-        }
-        font = font {
-            color = "#f3f3f3"
-            size="10px"
-        }
-        colorMap{
-            color("#242526")
-            color("#18191A")
-            color("#181818")
-            color("#404040")
-            color("#282828")
-            color("#8899AC")
-            color("#15202B")
-            color("#192734")
-            color("#22303C")
-
-        }
-        legendOn = false
-        gradientStyle = DarkTheme
-    }
-    slim {
-        link = "https://www.google.com"
-        label = "Google"
-        type = "Advertising"
-        description = "Google is is an American multinational technology company that specializes in Internet-related services and products "
-        author("Sergey Brin")
-        author("Larry Page")
-        date ="07/30/1998"
-    }
-    slim {
-        link = "https://www.apple.com"
-        label = "Apple"
-        type = "Personal Devices"
-        description = "Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. "
-        author("Steve Jobs")
-        author("Steve Wozniak")
-        date ="01/30/1977"
-    }
-    slim {
-        link = "https://www.microsoft.com"
-        label = "Microsoft"
-        type = "Software"
-        description = "Microsoft Corporation is an American multinational technology corporation which produces computer software, consumer electronics, personal computers, and related services."
-        author("Bill Gates")
-    }
-    slim {
-        link = "https://www.amazon.com"
-        label = "Amazon"
-        type = "Super Store"
-        description = "Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence"
-        author("Jeff Bezos")
-    }
-    slim {
-        link = "https://www.netflix.com"
-        label = "Netflix"
-        type = "Movie Theater"
-        description = "Netflix, Inc. is an American subscription streaming service and production company."
-        author("Reed")
-        author("Marc")
-    }
-    slim {
-        link = "https://www.facebook.com"
-        label = "Facebook"
-        type = "Social Butterfly"
-        description = "Facebook is an American online social media and social networking service owned by Meta Platforms."
-        author("Mark Zukerberg")
-    }
-    slim {
-        link = "https://www.instagram.com"
-        label = "Instagram"
-        type = "Beach"
-        description = "Instagram is an American photo and video sharing social networking service. "
-        author("Kevin")
-        author("Mike")
-    }
-    slim {
-        link = "#[link-server]#[app]"
-        label = "DocOps.io"
-        type = "Documentation"
-        description = "Sharing documentation experience for developers to extend with AsciiDoctor"
-        author("Steve Roach")
-        author("Ian Rose")
-    }
-}
-----
 == Round Buttons
 
 [panels,"round",role="center"]
@@ -398,40 +305,13 @@ panels {
 }
 ----
 
-[plantuml,hello,svg]
-----
-@startuml
-!pragma layout smetana
-!include <logos/nginx.puml>
-!include <elastic/elasticsearch/elasticsearch.puml>
-rectangle "Travelers"  as t #edc9fa-dc93f6 {
-    rectangle "TMS" as tms
-    rectangle "MDM" as mdm
-    rectangle "GPREF" as gpref
-}
-rectangle "AWS EKS" as eks #fdc2de-fc86be {
-    rectangle "NGINX API Gateway \n<$nginx>" as nginx #80ffc7-01FF90
-    rectangle "Digital Policy Service" as dps #80ffc7-01FF90
-    rectangle "Zipkin" as zipkin #80ffc7-01FF90
-    database "Open Search \n <$elasticsearch>" as os #d6d8f6-aeb1ed
-    database "Persistent Volume Claim" as pvs #d6d8f6-aeb1ed
-}
 
-tms -d-> nginx : 1. makes request
-nginx -d-> dps : 2. api gateway content \n negotiates version
-dps -u-> mdm : 3. calls mdm
-dps -u-> gpref: 4. call gpref
-dps -d-> zipkin: 5. send trace information \n to zipkin
-dps -d-> pvs : for storing circuit breaker stats
-zipkin -d-> os : 6. store traces for \n retrieving and viewing later
-@enduml
-----
 
-[release,scale=0.7,role="left", animate="ON"]
+[release,scale=0.7,role="center", animate="ON"]
 ----
 {
   "title": "Release Strategy Builder",
-  "scale": 0.6,
+  "scale": 0.9,
   "releases": [
     {
       "type": "M1",
@@ -440,7 +320,8 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
         "Setup IHS proxy",
         "Team will Mark out websphere servers and mark in liberty servers",
         "Team will validate Okta changes on Liberty",
-        "Once validated team will mark out liberty servers and mark in websphere servers",
+        "Once validated team will mark out liberty servers",
+        "and mark in websphere servers",
         "QA will validate Production is still working",
         "Team will record all observations",
         "Team will validate logs and record observations as well",
@@ -450,6 +331,7 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
       ],
       "date": "July 30th, 2023",
       "selected": true,
+        "completed": true,
       "goal": "Our goal is to Establish the Liberty infrastructure with Okta enabled"
     },
     {
@@ -459,7 +341,8 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
         "Setup IHS proxy",
         "Team will Mark out websphere servers and mark in liberty servers",
         "Team will validate Okta changes on Liberty",
-        "Once validated team will mark out liberty servers and mark in websphere servers",
+        "Once validated team will mark out liberty servers",
+        "and mark in websphere servers",
         "QA will validate Production is still working",
         "Team will record all observations",
         "Team will validate logs and record observations as well",
@@ -478,7 +361,8 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
         "Setup IHS proxy",
         "Team will Mark out websphere servers and mark in liberty servers",
         "Team will validate Okta changes on Liberty",
-        "Once validated team will mark out liberty servers and mark in websphere servers",
+        "Once validated team will mark out liberty servers",
+        "and mark in websphere servers",
         "QA will validate Production is still working",
         "Team will record all observations",
         "Team will validate logs and record observations as well",
@@ -502,7 +386,7 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
 ----
 
 
-[release,scale=0.7,role="left", animate="OFF"]
+[release,scale=0.7,role="center", animate="OFF"]
 ----
 {
   "title": "Release Strategy Builder",
@@ -567,7 +451,7 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
       "goal": "Our goal is ..."
     }
   ],
-  "style": "TLS",
+  "style": "R",
   "displayConfig": {
     "colors": [ "#FF6F36", "#EAA213", "#01FF90"],
     "fontColor": "#000000",
@@ -579,4 +463,41 @@ zipkin -d-> os : 6. store traces for \n retrieving and viewing later
     ]
   }
 }
+----
+
+menu:View[Zoom > Reset]
+
+Press the btn:[OK] button when you are finished.
+
+kbd:[F11]
+
+[badge]
+----
+Ninjutsu|Naruto||#80008|#00dd00||#fcfcfc
+Ninjutsu|Kakashi||#80008|#00dd00||#fcfcfc
+Kenjutsu|Sasuke||#80008|#00dd00||#fcfcfc
+Fire Style|Madara||#80008|#00dd00||#fcfcfc
+Genjutsu|Itachi||#80008|#00dd00||#fcfcfc
+----
+
+[adr,scale="0.6"]
+----
+Title:Use Solr for Structured Data Search
+Date: November 24th, 2010
+Status: Proposed
+Context:  Solr and Elasticsearch are both open source search engines. Both can be used to search
+large amounts of data quickly and accurately. While Solr uses a SQL-like query language, Elasticsearch has a full-text search engine and is designed for distributed search and analytics. Elasticsearch also allows for faster indexing and more advanced search replicas. Both technologies have strengths and weaknesses and are often used in
+combination for enterprise-level search. There is a need of having an API exposed which can be used to search structured
+data. The Data currently resides in RDBMS, it is difficult to expose micro-service directly querying out of RDBMS databases since the application runs out of the same environment.
+There are options like [[https://www.elastic.co ElasticSearch]] and Solr where data can be replicated.
+
+These solutions provide out of the box capabilities that can be leveraged by developers without needed to build RESTful or
+GraphQL type APIs.
+Decision:Use [[https://solr.apache.org/ Solr]] for data indexing. This use is because Solr has high performance throughput with large volume of data.
+Unstructured data can also be supported.
+If this decision does not meet the need then additional PoC will be created.
+Consequences:Data Needs to be replicated across the solr cloud instances.
+This Solr cloud needs maintenance.
+Near realtime data replication is required Additional Cost of maintaining the Solr Cloud environment.
+Participants:Roach,Rose,Duffy
 ----

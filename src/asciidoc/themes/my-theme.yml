@@ -3,6 +3,7 @@ page:
   margin: [0.5in, 0.67in, 0.67in, 0.67in]
   margin-inner: 0.75in
   margin-outer: 0.59in
+  columns: 2
 
 title-page:
   text-align: right
